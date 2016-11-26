@@ -12,10 +12,17 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	var window: UIWindow?
-
-
+	var mainVC: UIViewController?
+	
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 		// Override point for customization after application launch.
+		
+		self.mainVC = ViewController();
+		self.window = UIWindow(frame: UIScreen.main.bounds);
+		self.window!.backgroundColor = UIColor.white;
+		self.window!.rootViewController = self.mainVC;
+		self.window!.makeKeyAndVisible();
+		
 		return true
 	}
 
