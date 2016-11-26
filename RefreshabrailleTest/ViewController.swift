@@ -24,19 +24,20 @@ class ViewController: UIViewController {
 		self.initialize()
 		super.viewDidLoad()
 		
-		Timer.scheduledTimer(timeInterval: 5, target: self, selector: #selector(self.update), userInfo: nil, repeats: true);
+		Timer.scheduledTimer(timeInterval: 6, target: self, selector: #selector(self.update), userInfo: nil, repeats: true);
 	}
 
 	func update()
 	{
 		let date = Date()
 		let calendar = NSCalendar.current
-		let seconds = calendar.component(Calendar.Component.second, from: date)
-		let txt = "\(seconds)"
+		let seconds = calendar.component(Calendar.Component.second, from: date) * 5
+		let txt = "\(seconds) "
 
 		self.accessibleLabel.text = txt
-		self.accessibleButton.setTitle(txt, for: .normal)
 		self.accessibleLabel.accessibilityLabel = txt
+
+		self.accessibleButton.setTitle(txt, for: .normal)
 		self.accessibleButton.accessibilityLabel = txt
 	}
 	
@@ -63,7 +64,7 @@ class ViewController: UIViewController {
 			c.accessibilityTraits = UIAccessibilityTraitPlaysSound | UIAccessibilityTraitKeyboardKey | UIAccessibilityTraitUpdatesFrequently;
 			c.adjustsFontSizeToFitWidth = true
 			c.backgroundColor = UIColor.white
-			c.textAlignment = .center
+			c.textAlignment = .right
 			c.textColor = UIColor.black
 			c.font = UIFont(name: "Arial", size: UIDevice.current.userInterfaceIdiom == .pad ? 72 : 36)!
 			c.translatesAutoresizingMaskIntoConstraints = false
