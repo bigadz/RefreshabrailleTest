@@ -32,7 +32,7 @@ class ViewController: UIViewController {
 		let date = Date()
 		let calendar = NSCalendar.current
 		let seconds = calendar.component(Calendar.Component.second, from: date) * 5
-		let txt = "\(seconds) "
+		let txt = "\(seconds)"
 
 		self.accessibleLabel.text = txt
 		self.accessibleLabel.accessibilityLabel = txt
