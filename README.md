@@ -33,6 +33,6 @@ I used 6-dot output, uncontracted.
 
 (I also used 8-dot input, uncontracted, as this works best in my calculator app.)
 
-Both status code and nemeth codes are off.
+Status cell and nemeth code are off.
 
 Device: A Refreshabraille18 by APH.
