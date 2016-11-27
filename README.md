@@ -19,7 +19,7 @@ The following happens on iOS9, not iOS10.
 
 As the background timer changes the text, VoiceOver speaks the changes, and the refreshable Braille display  is updated, however not all characters of the Braille are displayed.
 
-It seems that the limit of the number characters displayed is set by the length of first value, and then subsequent changes might reduce this character count, but never increase it. 
+It seems that the limit of the number of Braille characters displayed is set by the length of first text value, and then subsequent changes might reduce this character count, but never increase it. 
 
 So if the accessibilityLabel is set to "1" and then changed to "200", VoiceOver will say "Two hundred", but the Braille display will show only "2".
 
